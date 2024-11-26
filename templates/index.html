@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MessageBox</title>
-</head>
-<body>
-    {% for message in get_flashed_messages() %}
-        <p>{{ message }}</p>
-    {% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+        <h1>hello world</h1>
+{% endblock %}
 
-    {% if current_user.is_authenticated %}
-        <p>{{ current_user.name }} さんこんにちは</p>
-    {% else %}
-        <p>ログインしていません</p>
-    {% endif %}
-
-    <h1>hello world</h1>
-</body>
-</html>
